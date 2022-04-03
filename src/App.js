@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import ThankYouPage from './pages/ThankYouPage';
 import './index.css';
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
           path='/privacy-policy'
           element={<PrivacyPolicyPage />}
         />
+        {/* else if the route/url path is "/thank-you" then show us the ThankYouPage */}
+        <Route path='/thank-you' element={<ThankYouPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
