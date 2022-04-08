@@ -40,3 +40,21 @@ Build a very small minimal website with 4 pages.
    
     <BlogPage /> ✅
     <BlogDetailPage /> ✅
+
+  6. __Code-Splitting with React.lazy()__
+
+    ```javascript
+    import {lazy, Suspense } from 'react';
+
+    const OtherComponent = lazy(() => import('./OtherComponent'));
+
+    function MyComponent() {
+      return (
+        <div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <OtherComponent />
+          </Suspense>
+        </div>
+      );
+    }
+    ```

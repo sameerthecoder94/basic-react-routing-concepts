@@ -1,14 +1,18 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+// import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import ThankYouPage from './pages/ThankYouPage';
 import './index.css';
 import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
+const PrivacyPolicyPage = lazy(() =>
+  import('./pages/PrivacyPolicyPage')
+);
 
 function App() {
   return (
@@ -24,7 +28,11 @@ function App() {
         {/* else if the route/url path is "/privacy-policy" then show us the PrivacyPolicyPage */}
         <Route
           path='/privacy-policy'
-          element={<PrivacyPolicyPage />}
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <PrivacyPolicyPage />
+            </Suspense>
+          }
         />
         {/* else if the route/url path is "/thank-you" then show us the ThankYouPage */}
         <Route path='/thank-you' element={<ThankYouPage />} />
