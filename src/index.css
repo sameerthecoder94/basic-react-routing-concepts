@@ -10,3 +10,16 @@ input,
 button {
   margin: 1rem 0.4rem;
 }
+
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-item {
+  width: 30%;
+  background-color: coral;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 10px 10px 26px 14px rgba(204, 204, 204, 0.75);
+}

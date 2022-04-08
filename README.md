@@ -29,3 +29,14 @@ Build a very small minimal website with 4 pages.
 
     Some description & copyright information
     Some additional links
+
+  5. Dynamic Route Logic -> /blog/:dynamicId
+     
+     - Extract the dynamic part from the URL using `const {dynamicID} = useParams()` and `dynamicId` in this case is the dynamic part
+     - Display the data depending on the dynamic value i.e `dynamicId`
+  
+        - Extracting the data based on the dynamic value i.e `dynamicId`
+        - Rendering the data to the markup/jsx
+   
+    <BlogPage /> ✅
+    <BlogDetailPage /> ✅

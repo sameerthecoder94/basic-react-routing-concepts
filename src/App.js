@@ -7,6 +7,8 @@ import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import ThankYouPage from './pages/ThankYouPage';
 import './index.css';
+import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './pages/BlogDetailPage';
 
 function App() {
   return (
@@ -26,6 +28,10 @@ function App() {
         />
         {/* else if the route/url path is "/thank-you" then show us the ThankYouPage */}
         <Route path='/thank-you' element={<ThankYouPage />} />
+        {/* else if the route/url path is "/blog" then show us the BlogPage */}
+        <Route path='/blog' element={<BlogPage />} />
+        {/* Dynamic Routes */}
+        <Route path='/blog/:dynamicID' element={<BlogDetailPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
