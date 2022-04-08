@@ -15,6 +15,10 @@ function Header() {
         About
       </NavLink>
 
+      <NavLink to='/blog' className={getActiveClassName}>
+        Blogs
+      </NavLink>
+
       <NavLink to='/contact' className={getActiveClassName}>
         Contact
       </NavLink>
