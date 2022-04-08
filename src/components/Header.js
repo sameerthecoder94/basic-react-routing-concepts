@@ -26,6 +26,10 @@ function Header() {
       <NavLink to='/privacy-policy' className={getActiveClassName}>
         Privacy Policy
       </NavLink>
+
+      <NavLink to='/music-page' className={getActiveClassName}>
+        Music
+      </NavLink>
     </header>
   );
 }

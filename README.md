@@ -2,7 +2,7 @@
 
 Build a very small minimal website with 4 pages.
   1. Homepage -> /
-   
+
     <HomePage /> ✅
 
   2. About Page -> /about
@@ -17,7 +17,7 @@ Build a very small minimal website with 4 pages.
    
     <PrivacyPolicyPage /> ✅ 
 
-  Header ✅
+Header ✅
 
     The header will have the links to navigate inside our website
       Link -> /
@@ -25,7 +25,7 @@ Build a very small minimal website with 4 pages.
       Link -> /contact
       Link -> /privacy-policy
 
-  Footer ✅
+Footer ✅
 
     Some description & copyright information
     Some additional links
@@ -43,8 +43,8 @@ Build a very small minimal website with 4 pages.
 
   6. __Code-Splitting with React.lazy()__
 
-    ```javascript
-    import {lazy, Suspense } from 'react';
+  ```js
+    import { lazy, Suspense } from 'react';
 
     const OtherComponent = lazy(() => import('./OtherComponent'));
 
@@ -57,4 +57,10 @@ Build a very small minimal website with 4 pages.
         </div>
       );
     }
-    ```
+  ```
+
+  7. Protected/Authenticated Route implementation, i.e. login page -> /login
+   
+    <LoginPage />
+    <MusicPage />
+    <AuthChecker />
